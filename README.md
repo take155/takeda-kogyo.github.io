@@ -1,0 +1,1 @@
+# takeda-kogyo.github.io
