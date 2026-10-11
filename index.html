@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="竹田工業は、仮設資材の運搬・設置・撤去を行う仮設工事業です。">
+  <title>竹田工業｜仮設工事</title>
+
+  <style>
+    /* 基本設定 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Noto Sans JP", sans-serif;
+      color: #253247;
+      background: #ffffff;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ヘッダー */
+    header {
+      background: #102039;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      display: block;
+      color: #d8ad65;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d8ad65;
+    }
+
+    /* メインビジュアル */
+    .hero {
+      background:
+        linear-gradient(90deg,
+          rgba(16, 32, 57, 0.88),
+          rgba(16, 32, 57, 0.25)),
+        url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+      color: white;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: #d8ad65;
+      font-size: 13px;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1.5;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #edf1f6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 30px;
+      background: #d8ad65;
+      color: #102039;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #f0cb8b;
+      transform: translateY(-2px);
+    }
+
+    /* 共通セクション */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title span {
+      display: block;
+      color: #b58b48;
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      margin-top: 5px;
+    }
+
+    /* 会社紹介 */
+    .about {
+      background: #f5f7fa;
+    }
+
+    .about-text {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      color: #566174;
+    }
+
+    /* 事業内容 */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      border: 1px solid #e5e8ed;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px #10203912;
+    }
+
+    .service-card img {
+      display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .service-body {
+      padding: 24px;
+    }
+
+    .service-number {
+      color: #b58b48;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .service-body h3 {
+      font-size: 19px;
+      margin: 8px 0;
+    }
+
+    .service-body p {
+      font-size: 14px;
+      color: #667085;
+    }
+
+    /* お問い合わせ */
+    .contact {
+      background: #102039;
+      color: white;
+      text-align: center;
+    }
+
+    .contact p {
+      color: #d5dce6;
+    }
+
+    /* フッター */
+    footer {
+      background: #0a1628;
+      color: #cbd3df;
+      text-align: center;
+      padding: 22px;
+      font-size: 12px;
+    }
+
+    /* スマートフォン対応 */
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        gap: 18px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 400px;
+      }
+
+      .hero-content {
+        padding: 60px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .section-title h2 {
+        font-size: 25px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        竹田工業
+        <span>TAKEDA INDUSTRY</span>
+      </a>
+
+      <nav>
+        <a href="#about">会社紹介</a>
+        <a href="#services">事業内容</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- トップ -->
+  <main>
+    <div class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">TAKEDA INDUSTRY</p>
+        <h1>現場を支え、<br>未来をつくる。</h1>
+        <p>
+          仮設資材の運搬・設置・撤去。<br>
+          確かな仕事で、建設現場を支えます。
+        </p>
+        <a href="#services" class="btn">事業内容を見る →</a>
+      </div>
+    </div>
+
+    <!-- 会社紹介 -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-title">
+          <span>ABOUT US</span>
+          <h2>竹田工業について</h2>
+        </div>
+
+        <p class="about-text">
+          竹田工業は、仮設資材の運搬・設置・撤去を行う
+          仮設工事業です。<br>
+          現場に合わせた丁寧な作業を大切にし、
+          建設現場の円滑な進行を支えます。<br>
+          一つひとつの仕事に誠実に取り組み、
+          安心して任せていただける仕事を目指します。
+        </p>
+      </div>
+    </section>
+
+    <!-- 事業内容 -->
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <span>OUR SERVICES</span>
+          <h2>事業内容</h2>
+        </div>
+
+        <div class="services">
+
+          <article class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+              alt="建設現場での資材運搬"
+              loading="lazy">
+            <div class="service-body">
+              <span class="service-number">SERVICE 01</span>
+              <h3>仮設資材の運搬</h3>
+              <p>
+                現場で必要となる仮設資材を運搬し、
+                工事のスムーズな進行を支えます。
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?auto=format&fit=crop&w=800&q=80"
+              alt="建設現場での仮設工事"
+              loading="lazy">
+            <div class="service-body">
+              <span class="service-number">SERVICE 02</span>
+              <h3>仮設資材の設置</h3>
+              <p>
+                現場の状況に合わせて仮設資材を設置し、
+                建設作業をサポートします。
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1485083269755-a7b559a4fe5e?auto=format&fit=crop&w=800&q=80"
+              alt="建設現場での作業"
+              loading="lazy">
+            <div class="service-body">
+              <span class="service-number">SERVICE 03</span>
+              <h3>仮設資材の撤去</h3>
+              <p>
+                工事の進捗に合わせて仮設資材を撤去し、
+                現場の整理をサポートします。
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <span>CONTACT</span>
+          <h2>お問い合わせ</h2>
+        </div>
+
+        <p>
+          お仕事のご相談・ご依頼など、<br>
+          お気軽にお問い合わせください。
+        </p>
+
+        <!-- 電話番号やメールアドレスを追加できます -->
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <p>© 2026 竹田工業 All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
